@@ -1,12 +1,11 @@
-from dash import Dash, html, dcc, Input, Output, clientside_callback
+from dash import Dash, html, dcc, Input, Output
 import dash
 import dash_bootstrap_components as dbc
-from pages import home,aboutus,representation
-# from pages import home, dataSet, distribution, correlation, clustering
+from pages import home,aboutus,representation,clustering,network
 from dash_bootstrap_templates import load_figure_template
 load_figure_template(["minty", "minty_dark"])
-from navbar import navbar
-from footer import footer
+from templates.navbar import navbar
+from templates.footer import footer
 
 
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP, dbc.icons.FONT_AWESOME], suppress_callback_exceptions=True)
@@ -29,10 +28,10 @@ def display_page(pathname):
         return aboutus.layout
     elif pathname == "/representation":
         return representation.layout
-    elif pathname == "/correlation":
-        return correlation.layout
     elif pathname == "/clustering":
         return clustering.layout
+    elif pathname == "/network":
+        return network.layout
     else:
         return dbc.Jumbotron(
             [
