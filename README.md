@@ -15,7 +15,8 @@ This dataset is a simplified and enriched view of the data in the Bitcoin blockc
 ```bash
 pip install -r requirements.txt
 ```
-- Lancer le projet
+- Run the project
 ```bash
 python app.py
 ```
+📝 Please note that due to the large size of the dataset, the pages for representation and clustering may take some time to display the graphs. ⌛
