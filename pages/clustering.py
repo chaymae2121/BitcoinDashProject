@@ -28,7 +28,7 @@ df['cluster_dbscan'] = dbscan.fit_predict(prepare_data_for_clustering())
 # Mise en page de l'application
 layout = html.Div([
     # Input pour changer la valeur de K dans K-Means
-    html.Label('Choisir la valeur de K pour K-Means:',className='form-label'),
+    html.Label('Choose the value of K for K-Means:',className='form-label'),
     dcc.Input(
         id='kmeans-input',
         type='number',
@@ -45,7 +45,7 @@ layout = html.Div([
     ),
 
     # Input pour changer le nombre de composants pour Gaussian Mixtures
-    html.Label('Choisir le nombre de composants pour Gaussian Mixtures:',className='form-label'),
+    html.Label('Choose the number of components for Gaussian Mixtures:',className='form-label'),
     dcc.Input(
         id='gaussian-input',
         type='number',
@@ -62,7 +62,7 @@ layout = html.Div([
     ),
 
     # Input pour changer les paramètres d'epsilon et de min_samples pour DBScan
-    html.Label('Choisir epsilon pour DBScan:',className='form-label'),
+    html.Label('Choose epsilon for DBScan:',className='form-label'),
     dcc.Input(
         id='dbscan-epsilon-input',
         type='number',
@@ -70,7 +70,7 @@ layout = html.Div([
         style={'marginBottom': 10},
         className='form-control'
     ),
-    html.Label('Choisir min_samples pour DBScan:',className='form-label'),
+    html.Label('Choose min_samples for DBScan:',className='form-label'),
     dcc.Input(
         id='dbscan-min-samples-input',
         type='number',

@@ -21,7 +21,7 @@ edges = [{'data': {'source': str(edge[0]), 'target': str(edge[1])}} for edge in 
 
 # Define the layout of the app
 layout = html.Div([
-    html.H1("Top Transactions"),
+    html.H1("Transactions network"),
 
     # Input for changing the number of transactions to display
     html.Label('Number of Transactions to Display:', className='form-label'),  # Added 'form-label' class

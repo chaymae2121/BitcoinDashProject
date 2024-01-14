@@ -28,14 +28,14 @@ layout = html.Div([
     dbc.Row(
         [
             dbc.Col([
-                html.H3("Transactions par categories", style={'text-align': 'center'}),
+                html.H3("Total payments made by entity type", style={'text-align': 'center'}),
                 dcc.Graph(
                     id='example-graph',
                     figure=px.bar(generate_category_data(), x='Category', y='Values',range_y=[0, 30000])
                 )
             ], width=6),
             dbc.Col([
-                html.H3("Transactions par heure"),
+                html.H3("Number of transactions per hour"),
 
                 # Input pour la couleur
                 html.Label("Sélectionnez un jour :"),
@@ -56,7 +56,7 @@ layout = html.Div([
     dbc.Row(
         [
             dbc.Col([
-                html.H3(children='Total des paiements envoyés par entité (Top 10)'),
+                html.H3(children='Total payments sent by entity'),
                 dcc.Graph(
                     id='bar-envoyes',
                     figure=px.bar(df_top_envoyes, x='V1_src_actor', y='valueUSD', color='V1_src_actor', hover_data=[])
@@ -64,7 +64,7 @@ layout = html.Div([
             ], width=6),
 
             dbc.Col([
-                html.H3(children='Total des paiements reçus par entité (Top 10)'),
+                html.H3(children='Total payments received by entity'),
                 dcc.Graph(
                     id='bar-recus',
                     figure=px.bar(df_top_recus, x='V1_dst_actor', y='valueUSD', color='V1_dst_actor', hover_data=[])
