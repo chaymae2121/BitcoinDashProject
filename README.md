@@ -19,4 +19,7 @@ pip install -r requirements.txt
 ```bash
 python app.py
 ```
-📝 Please note that due to the large size of the dataset, the pages for representation and clustering may take some time to display the graphs. ⌛
+
+## Important Note ❗
+
+📝 Please note that due to the large size of the dataset, the pages for representation and clustering may take some time to display the graphs. 
