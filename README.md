@@ -15,6 +15,10 @@ This dataset is a simplified and enriched view of the data in the Bitcoin blockc
 ```bash
 pip install -r requirements.txt
 ```
+- Download the dataset
+```bash
+python install.py
+```
 - Run the project
 ```bash
 python app.py
